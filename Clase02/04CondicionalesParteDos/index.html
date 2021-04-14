@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var edadPrompt = prompt("La edad del postulante es?");
+
+        var edad = parseInt(edadPrompt);
+
+        if(edad >= 18){
+            alert("Usted puede sacar el registro de conducir");
+        }else if(edad >= 16){
+            alert("Usted puede sacar el registro de conducir pero tiene que tener autorización de los padres");
+        }else{
+            alert("Usted no puede sacar el registro de conducir")
+        }
+        // Puedo tener todos los else if que quiera
+    </script>
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var resultadoConfirm = confirm("¿Esta seguro que desea realizar la operación?");
+
+        /*
+        if(CONDICION){
+            // Esto se ejecuta cuando "CONDICION" es true
+        }else{
+            // Esto se ejecuta cuando "CONDICION" es false
+        }
+
+        OPERADORES RELACIONALES
+        VALORUNO OPERADOR VALORDOS
+
+        > mayor a
+        < menor a
+        >= mayor o igual a
+        <= menor o igual a
+        == igual a -> Para ver que dos valores coinciden
+        != distinto de -> para ver si dos valores NO coinciden
+        === "identico a" -> para ver si dos valores coinciden y tienen el mismo tipo de dato
+
+        0 == "0" -> me da true
+        0 === "0" -> me da false
+        */
+
+        if(resultadoConfirm == true){
+            alert("Envia el formulario al servidor");
+        }else{
+            alert("Ha cancelado la operacion!");
+        }
+
+        var casado = confirm("¿Usted esta casado/a?");
+        var tieneHijos = confirm("¿Usted tiene hijos?");
+
+        // if anidados
+        /*
+        if(casado==true){
+            if(tieneHijos==true){
+                alert("Hago un descuento!");
+            }
+        }
+        */
+
+        /*
+        OPERADORES LOGICOS
+
+        && "y" logico
+        || "o" logico
+        !  "no" logico
+
+        CONDICION OPERADOR CONDICION
+        */
+
+        if(casado == true && tieneHijos==true){
+            alert("Hago un descuento!");
+        }else{
+            alert("No tiene descuento");
+        }
+    </script>
+</body>
+</html>

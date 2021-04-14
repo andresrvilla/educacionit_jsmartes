@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var hoy = new Date();
+        document.write(hoy+"<br>");
+        document.write("Año: " + hoy.getFullYear() + "<br>");
+        document.write( "Mes: " + (hoy.getMonth() + 1 ) + "<br>");// le sumo uno al mes porque empieza en 0
+        document.write( "Dia: " + hoy.getDate() + "<br>");
+        document.write( "Hora: " + hoy.getHours() + "<br>");
+        document.write( "Minutos: " + hoy.getMinutes() + "<br>");
+        document.write( "Segundos: " + hoy.getSeconds() + "<br>");
+
+        document.write("Dia de la semana: "+hoy.getDay() + "<br>"); // dia de la semana, que arranca en 0
+
+        var dia = "";
+        switch(hoy.getDay()){
+            case 0:
+                dia="domingo";
+                break;
+            case 1:
+                dia="lunes";
+                break;
+            case 2:
+                dia="marTes";
+                break;
+            case 3:
+                dia="miercoles";
+                break;
+            case 4:
+                dia="jueves";
+                break;
+            case 5:
+                dia="viernes";
+                break;
+            case 6:
+                dia="sabado";
+                break;
+        }
+        document.write("El dia de la semana es "+dia +"<br>");
+
+        if(dia.toUpperCase() == "MARTES"){
+            document.write("Hoy tenemos clase de JS<br>");
+        }
+        
+    </script>
+</body>
+</html>
