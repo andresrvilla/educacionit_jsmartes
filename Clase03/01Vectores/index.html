@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="ejUno"></p>
+    <p id="ejDos"></p>
+    <p id="ejTres"></p>
+    <script>
+        var vectorVacio = [];
+        console.log(vectorVacio);
+
+        var vectorNombres = [ "Andres", "Pedro", "Carlos", "Agustin" ];
+        console.log(vectorNombres);
+
+        var vectorMezclado = ["Sofia", 30, "Agustina", true, "Carla"];
+        console.log(vectorMezclado);
+
+        var otraForma = new Array("Sofía","Andres","Agustina");
+        console.log(otraForma);
+
+        var ejUno = document.getElementById("ejUno");
+        ejUno.innerText = otraForma[0];
+        var parrafoDos = document.getElementById("ejDos");
+        parrafoDos.innerText = otraForma;
+        var parrafoTres = document.getElementById("ejTres");
+        parrafoTres.innerText = otraForma.length;
+
+    </script>
+</body>
+</html>

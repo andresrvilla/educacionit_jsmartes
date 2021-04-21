@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+        var acumulador = 0;
+        var cantidad = 0;
+        var agrega = confirm("Quiere agregar un numero?");
+        while(agrega == true){
+            var numero = prompt("Ingrese el numero");
+            numero = parseInt(numero);
+            //acumulador = acumulador + numero;
+            //Es equivalente a
+            acumulador += numero;
+            cantidad++;
+
+            agrega = confirm("Quiere agregar otro numero?");
+        }
+
+        var promedio = acumulador / cantidad;
+        alert("El promedio es "+promedio);
+        */
+        var acumulador = 0;
+        var cantidad = 0;
+        var agrega;
+        do{
+            var numero = prompt("Ingrese el numero");
+            numero = parseInt(numero);
+            //acumulador = acumulador + numero;
+            //Es equivalente a
+            acumulador += numero;
+            cantidad++;
+
+            agrega = confirm("Quiere agregar otro numero?");
+        }while(agrega == true)
+
+        var promedio = acumulador / cantidad;
+        alert("El promedio es "+promedio);
+    </script>
+</body>
+</html>
