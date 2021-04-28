@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>Andres</button><br>
+    <button>Carlos</button><br>
+    <button>Julieta</button><br>
+    <button>Carla</button><br>
+    <button>Ana</button>
+    <script>
+        var botones = document.getElementsByTagName("button");
+        for (var i = 0; i < botones.length; i++) {
+            botones[i].onclick = saludar;
+        }
+
+        function saludar(){
+            alert("Hola "+this.innerText);
+        }
+    </script>
+</body>
+
+</html>

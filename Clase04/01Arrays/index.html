@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="valores"></div>
+    <script>
+        var numeros = [1,5,2];
+        console.log(numeros);
+        numeros[3] = 10;
+        console.log(numeros);
+        // push agrega elementos al final del array
+        numeros.push(100);
+        console.log(numeros);
+        //quita y devuelve un elemento del final
+        var valor = numeros.pop();
+        console.log(valor);
+        console.log(numeros);
+        // agrega un elemento al inicio
+        numeros.unshift(99);
+        console.log(numeros);
+
+        var valorInicio = numeros.shift();
+        console.log(valorInicio);
+        console.log(numeros);
+
+        numeros.splice(2,1,"Nuevo");
+        console.log(numeros);
+        var partido = numeros.slice(2);
+        console.log(partido);
+
+        var otrosNumeros = [7,15,20];
+        var unidos = numeros.concat(otrosNumeros);
+        
+        var elementoDiv = document.getElementById("valores");
+        elementoDiv.innerText = unidos;
+    </script>
+</body>
+</html>

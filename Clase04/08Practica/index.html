@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/yegor256/tacit@gh-pages/tacit-css-1.5.5.min.css"/>
+</head>
+<body>
+    <h1>Listado de personas</h1>
+    <b>Nombre:</b><br>
+    <input type="text" id="nombre" /><br>
+    <b>Apellido:</b><br>
+    <input type="text" id="apellido" /><br>
+    <button id="guardar">Guardar</button>
+    <hr />
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+            </tr>
+        </thead>
+        <tbody id="cuerpoTabla">
+        </tbody>
+    </table>
+
+    <script>
+        var personas = [];
+
+        function agregarPersona(){
+            var elNombre = document.getElementById("nombre");
+            var elApellido = document.getElementById("apellido");
+
+            var nuevaPersona = {
+                Nombre: elNombre.value,
+                Apellido: elApellido.value
+            }
+            personas.push(nuevaPersona);
+
+            elNombre.value="";
+            elApellido.value="";
+
+            listarPersonas();
+        }
+
+        function listarPersonas(){
+            var contenido = "";
+
+            for(var i = 0; i<personas.length; i++){
+                contenido +="<tr><td>"+personas[i].Nombre+"</td><td>"+personas[i].Apellido+"</td></tr>";
+            }
+
+            var contenidoTabla = document.getElementById("cuerpoTabla");
+            contenidoTabla.innerHTML = contenido;
+        }
+
+        var elBoton = document.getElementById("guardar");
+        elBoton.onclick = agregarPersona;
+    </script>
+
+</body>
+</html>
