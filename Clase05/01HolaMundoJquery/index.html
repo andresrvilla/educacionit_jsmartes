@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <p></p>
+    <p></p>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>
+        //$("p").text("Hola Mundo");
+        /*
+            # es selector por id
+            . es selector por clase css
+            p es selector por tipo de elemento
+
+            $("SELECTOR").METODO(parametro,parametro,parametro...);
+        */
+        var elementos = document.getElementsByTagName("p");
+
+        for(var i = 0; i < elementos.length; i++){
+            elementos[i].innerText = "Hola Mundo";
+        }
+    </script>
+</body>
+</html>
